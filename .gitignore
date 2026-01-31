@@ -1,0 +1,17 @@
+# WordPress
+uploads/
+upgrade/
+cache/
+languages/
+/index.php
+
+# Local / OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
+
+# Node (jeśli kiedyś)
+node_modules/
