@@ -2,7 +2,9 @@
 get_header();
 ?>
 
-<h1>Witaj na stronie :)</h1>
-hello
+<main>
+    <h1>Witaj na stronie :)</h1>
+    <p>Main content</p>
+</main>
 
 <?php get_footer(); ?>

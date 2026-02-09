@@ -1,6 +1,6 @@
 1. Project Overview
 
-Strona internetowa postawiona z użyciem CMS: Wordpress. Do funkcjonalności sklepu internetowego użyto rozszerzenia Woocommerce. Celem projektu jest stworzenie rozbudowanego sklepu od podstaw z autorskim motywem i funkcjonalnościami. Ma on również posłużyć za modelowy projekt do budowanego portfolio.
+Strona internetowa postawiona z użyciem CMS: Wordpress. Do funkcjonalności sklepu internetowego użyto rozszerzenia Woocommerce. Celem projektu jest stworzenie rozbudowanego sklepu od podstaw z autorskim motywem i funkcjonalnościami. Ma on również posłużyć za modelowy projekt do budowanego portfolio oraz nauki.
 
 2. Tech Stack
 
@@ -14,7 +14,7 @@ Strona internetowa postawiona z użyciem CMS: Wordpress. Do funkcjonalności skl
 
 3. Project Structure
 
-Główny motyw znajduje się w folderze ceo-shop, a potomny będzie w ceo-shop-child. Rozszerzenia można znaleźć w plugins, a zdjęcia w uploads.
+Główny motyw znajduje się w folderze ceo-shop, a potomny planowany jest w ceo-shop-child. Rozszerzenia można znaleźć w plugins, a zdjęcia w uploads.
 
 4. Theme Architecture
 
@@ -34,4 +34,5 @@ Początek projektu
 
 8. Author
 
-Michał
+Michał Jaroch
+https://github.com/Xordex/Custom-WP-Shop
