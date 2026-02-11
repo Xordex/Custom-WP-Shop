@@ -1,3 +1,33 @@
-.site-logo img {
-    width: 150px;
+header {
+    margin-bottom: 200px;
+
+    padding: 1em 6em;
+}
+
+img.site-logo {
+    width: 80px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    .site-logo {
+        margin-bottom: -3px;
+    }
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    li a {
+        text-decoration: none;
+    }
 }

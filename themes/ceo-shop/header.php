@@ -9,16 +9,28 @@
 <body <?php body_class(); ?>>
     
     <div class="site-wrapper">
-        <header>
-            <div class="site-logo">
-                <img src="<?php echo get_template_directory_uri();?>/assets/img/logo.png" alt="Logo sklepu">
+        <header class="site-header">
+            <div class="header-container">
+
+                <div class="header-left">
+                    <a href="<?php echo site_url(); ?>">
+                        <img src="<?php echo get_template_directory_uri();?>/assets/img/logo.svg" alt="Logo sklepu" class="site-logo">
+                    </a>
+                    <nav class="menu-wrapper">
+                        <?php wp_nav_menu(array(
+                            'theme_location' => 'left_main_menu'
+                        )); ?>
+                    </nav>
+                </div>
+
+                <div class="header-right">
+                    <nav class="menu-wrapper">
+                        <?php wp_nav_menu(array(
+                            'theme_location' => 'right_main_menu'
+                        )); ?>
+                    </nav>
+                </div>
+
             </div>
-            <nav class="menu-wrapper">
-                <ul>
-                    <li>O nas</li>
-                    <li>Promocje</li>
-                    <li>Kontakt</li>
-                </ul>
-            </nav>
         </header>
     
