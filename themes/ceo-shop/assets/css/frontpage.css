@@ -1,0 +1,112 @@
+/* Hero section */
+.hero-section {
+    position: relative;
+    img {
+        width: 100%;
+        filter: brightness(70%);
+    }
+    #walkingperson {
+        width: 260px;
+        position: absolute;
+        bottom: 20px;
+        left: 250px;
+        z-index: 2;
+        filter: brightness(80%);
+    }
+    >p {
+        position: absolute;
+        top: 50px;
+        left: 40px;
+        width: fit-content;
+        color: white;
+        font-weight: 600;
+        z-index: 2;
+    }
+    span {
+        text-transform: uppercase;
+        color: white;
+        font-size: 92px;
+        font-weight: 700;
+        position: absolute;
+        top: 50px;
+        left: 40px;
+        width: fit-content;
+        z-index: 1;
+        backdrop-filter: blur(2px);
+        p {
+            margin-left: 40px;
+        }
+        p:last-child {
+            margin-left: 330px;
+        }
+    }
+
+    .bottompart {
+        position: absolute;
+        right: 40px;
+        bottom: 40px;
+        max-width: 190px;
+        text-align: center;
+        font-size: 16px;
+        backdrop-filter: blur(2px);
+        p {
+            color: white;
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        a {
+            background-color: white;
+            border-radius: 20px 10px 10px 10px;
+            padding: 5px 10px;
+            width: 100%;
+            display: block;
+            text-transform: uppercase;
+        }
+        a:hover {
+            border-radius: 20px 20px 10px 10px;
+        }
+    }
+}
+
+/* Categories section */
+.categories-section {
+    margin: 2em 0;
+}
+
+.three-blocks-layout {
+    display: flex;
+    gap: 20px;
+}
+
+.categories-block {
+    width: calc(100%/3);
+    padding: 8em 2em 2em;
+    background-size: cover;
+    border-radius: 20px;
+    span {
+        background-color: white;
+        padding: 6px 12px;
+        border-radius: 20px;
+        display: block;
+        width: fit-content;
+        border: 2px solid white;
+        transition: 0.3s;
+    }
+}
+
+.categories-block:hover span {
+    background-color: transparent;
+    color: white;
+}
+
+.kitchen-block {
+    background-image: url('../img/frontpage/kitchen.webp');
+}
+
+.bedroom-block {
+    background-image: url('../img/frontpage/bedroom.webp');
+}
+
+.livingroom-block {
+    background-image: url('../img/frontpage/livingroom.webp');
+}

@@ -1,5 +1,5 @@
     <footer>
-        <div class="footer-content">
+        <div class="container footer-container">
             <div class="site-logo">
                 <a href="<?php echo site_url();?>">
                     <img src="<?php echo get_template_directory_uri();?>/assets/img/logo.svg" alt="Logo sklepu" class="site-logo">

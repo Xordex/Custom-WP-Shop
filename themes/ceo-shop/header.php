@@ -10,7 +10,7 @@
     
     <div class="site-wrapper">
         <header class="site-header">
-            <div class="header-container">
+            <div class="container header-container">
 
                 <div class="header-left">
                     <a href="<?php echo site_url(); ?>">
