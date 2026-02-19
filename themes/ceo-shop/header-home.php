@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
     
     <div class="site-wrapper">
-        <header class="site-header">
+        <header class="site-header home-header">
             <div class="container header-container">
-
                 <div class="header-left">
                     <a href="<?php echo site_url(); ?>">
                         <img src="<?php echo get_template_directory_uri();?>/assets/img/logo.svg" alt="Logo sklepu" class="site-logo">

@@ -32,3 +32,18 @@ div.header-container {
         text-decoration: none;
     }
 }
+
+/* Home header */
+
+.home-header {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    a {
+        color: white;
+    }
+    a:hover {
+        color: rgb(225, 225, 225);
+    }
+}

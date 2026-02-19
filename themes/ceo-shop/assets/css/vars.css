@@ -1,6 +1,10 @@
 :root {
-    --primary-color: #000;
-    --link-color: #000;
+    --text-color: #000;
     --hover-color: #333;
     --background-color: #f5f5f5;
+    --tobacco: #b59e7d;
+    --vanilla: #f1eada;
+    --mountain: #aaa396;
+    --sand: #cec1a8;
+    --mahogany: #584738;
 }

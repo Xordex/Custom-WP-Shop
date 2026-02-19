@@ -1,54 +1,65 @@
 /* Hero section */
 .hero-section {
     position: relative;
-    img {
-        width: 100%;
-        filter: brightness(70%);
-    }
+    background-image: url('../img/frontpage/hero.png');
+    background-size: cover;
+    background-position: left bottom;
+    background-color: rgba(0, 0, 0, 1);
+    background-blend-mode: darken;
+    height: 80vh;
+    animation: 1s heromaintext ease;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    overflow: hidden;
     #walkingperson {
-        width: 260px;
+        height: 26%;
         position: absolute;
-        bottom: 20px;
+        top: 0;
         left: 250px;
         z-index: 2;
         filter: brightness(80%);
     }
-    >p {
+    #herosmalltext {
         position: absolute;
-        top: 50px;
-        left: 40px;
+        top: 15%;
+        left: 6%;
         width: fit-content;
         color: white;
         font-weight: 600;
         z-index: 2;
+        animation: 0.8s heroenterleft ease;
     }
     span {
         text-transform: uppercase;
         color: white;
-        font-size: 92px;
+        font-size: 120px;
         font-weight: 700;
         position: absolute;
-        top: 50px;
-        left: 40px;
+        top: 15%;
+        left: 6%;
         width: fit-content;
         z-index: 1;
         backdrop-filter: blur(2px);
+        animation: 0.8s heroenterleft ease;
         p {
-            margin-left: 40px;
+            margin-left: 80px;
         }
         p:last-child {
-            margin-left: 330px;
+            margin-left: 430px;
         }
     }
 
     .bottompart {
         position: absolute;
-        right: 40px;
-        bottom: 40px;
+        right: -100%;
+        bottom: 5%;
         max-width: 190px;
         text-align: center;
         font-size: 16px;
         backdrop-filter: blur(2px);
+        animation: 1.5s heroenterright ease;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
         p {
             color: white;
             text-align: right;
@@ -61,10 +72,44 @@
             width: 100%;
             display: block;
             text-transform: uppercase;
+            color: var(--mahogany);
         }
         a:hover {
             border-radius: 20px 20px 10px 10px;
         }
+    }
+}
+
+@keyframes heromaintext {
+    0% {
+        background-color: rgba(0, 0, 0, 1);
+    }
+    25% {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    50% {
+        background-color: rgba(0, 0, 0, 0.6);;
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
+@keyframes heroenterleft {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 6%;
+    }
+}
+
+@keyframes heroenterright {
+    0% {
+        right: -100%;
+    }
+    100% {
+        right: 3%;
     }
 }
 
@@ -79,24 +124,27 @@
 }
 
 .categories-block {
-    width: calc(100%/3);
+    width: 100%;
     padding: 8em 2em 2em;
     background-size: cover;
+    background-size: 100%;
+    background-position: center;
     border-radius: 20px;
+    transition: 0.6s ease;
     span {
-        background-color: white;
         padding: 6px 12px;
         border-radius: 20px;
         display: block;
         width: fit-content;
-        border: 2px solid white;
-        transition: 0.3s;
+        background: #f1eada;
     }
 }
 
-.categories-block:hover span {
-    background-color: transparent;
-    color: white;
+.categories-block:hover {
+    background-size: 105%;
+    span {
+        background-position: 100% 50%;
+    }
 }
 
 .kitchen-block {
@@ -109,4 +157,102 @@
 
 .livingroom-block {
     background-image: url('../img/frontpage/livingroom.webp');
+}
+
+@media (max-width: 900px) {
+    .three-blocks-layout {
+        flex-wrap: wrap;
+    }
+
+    .categories-block {
+        width: 100%
+    }
+}
+
+/* About us section */
+
+.aboutus-section {
+    display: flex;
+    gap: 40px;
+    color: var(--mahogany);
+    margin: 8em 0;
+}
+
+.leftcontainer, .rightcontainer {
+    width: 100%;
+}
+
+.toptext {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: end;
+    span {
+        margin-right: 20px;
+        font-size: 16px;
+    }
+    h1 {
+        font-size: 48px;
+        margin-bottom: -10px;
+    }
+}
+
+.leftcontainer p {
+    width: 400px;
+}
+
+.leftcontainer img {
+    margin-top: 80px;
+    width: 90%;
+}
+
+.rightcontainer {
+    display: grid;
+    grid-template-columns: auto auto;
+    .aboutblock {
+        display: flex;
+        padding: 2em;
+        align-items: end;
+        gap: 20px;
+        span {
+            font-size: 72px;
+        }
+        .linkwitharrow {
+            display: flex;
+        }
+        a {
+            color: white;
+            padding-bottom: 3px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+            display: flex;
+            align-items: center;
+        }
+        svg {
+                width: 20px;
+                margin-left: 5px;
+                transition: 0.3s ease;
+        }
+        a:hover + svg {
+            margin-left: 10px;
+        }
+        
+    }
+    .aboutblock:nth-child(1) {
+        border: 1px solid var(--sand);
+        border-left: none;
+        border-right: none;
+    }
+    .aboutblock:nth-child(2) {
+        border: 1px solid var(--sand);
+        border-right: none;
+        border-bottom: 1px solid var(--mahogany);
+    }
+    .aboutblock:nth-child(4) {
+        border-left: 1px solid var(--mahogany);
+        border-top: 1px solid var(--mahogany);
+        background-color: var(--mahogany);
+        color: white;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
+    }
 }
