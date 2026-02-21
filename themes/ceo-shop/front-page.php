@@ -54,13 +54,50 @@
                     <p>years into reimagining spaces - and rewriting the rules of interior design</p>
                     <div class="linkwitharrow">
                         <a href="#">Learn more</a>
-                        <?php include get_template_directory() . '/assets/icons/right2.svg'; ?>
+                        <?php get_icon('right'); ?>
                     </div>
                 </div>
             </div>
         </div>
         <div class="products-section">
-            woo-products presentation
+            <a href="#"><h2>The most popular <?php get_icon('right'); ?></h2></a>
+
+            <div class="products-grid">
+                <?php
+                // Sprawdzenie czy Woo Istnieje
+                if (class_exists('WooCommerce')) {
+                    $args = array(
+                        'post_type' => 'product',
+                        'posts_per_page' => 4
+                    );
+
+                    $query = new WP_Query($args);
+
+                    if($query->have_posts()) {
+                        while($query->have_posts()) {
+                            $query->the_post();
+                            $product = wc_get_product(get_the_ID());
+                            ?>
+
+                    <div class="product-card">
+                        <a href="<?php echo get_permalink();?>">
+                            <div class="product-img">
+                                <?php the_post_thumbnail('medium'); ?>
+                                <?php the_post_thumbnail('large'); ?>
+                            </div>
+                            <p><?php the_title();?></p>
+                        </a>
+                        <span><?php echo $product->get_price_html();?></span>
+                        </div>
+
+                            <?php
+                        }
+                    }
+
+                    wp_reset_postdata();
+                }
+                ?>
+            </div>
         </div>
         <div class="banner-section">
             banner image

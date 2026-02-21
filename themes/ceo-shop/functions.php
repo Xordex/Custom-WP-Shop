@@ -23,3 +23,13 @@ function ceoshop_register_menu() {
         'footer_menu' => 'Footer menu'
     ));
 }
+
+function get_icon($name, $class = '') {
+    $file_path = get_template_directory() . '/assets/icons/' . esc_attr($name) . '.svg';
+    
+    if($file_path) {
+        echo '<span class="icon icon-' . esc_attr($name) . ' ' . esc_attr($class) . '">';
+        include $file_path;
+        echo '</span>';
+    }
+}
